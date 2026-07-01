@@ -289,3 +289,5 @@ The program above works, but it takes a deliberate shortcut: there is a single, 
    - the test helpers in `tests/helpers/mod.rs`.
 
    In `extra_account_metas()` the extra seeds don't reference the mint and owner by name - they reference accounts by their **index** in the transfer hook's execute instruction. Work out which index is the mint and which is the owner.
+
+4. **make the transfer inside your program.** Implement a transfer_checked inside your program to invoke the transfer hook. Deal with re-entrancy.
