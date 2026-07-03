@@ -1,1 +1,4 @@
 programs/solana-summer-transfer-hook/src/.DS_Store
+target/
+test-ledger/
+.DS_Store
