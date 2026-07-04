@@ -169,7 +169,8 @@ pub fn build_transfer_with_hook_ix(
     let extra_account_meta_list =
         Pubkey::find_program_address(&[b"extra-account-metas", mint.as_ref()], program_id).0;
 
-    let rate_limit = Pubkey::find_program_address(&[b"rate_limit"], program_id).0;
+    let rate_limit =
+        Pubkey::find_program_address(&[b"rate_limit", mint.as_ref(), owner.as_ref()], program_id).0;
 
     ix.accounts
         .push(AccountMeta::new_readonly(*program_id, false));
